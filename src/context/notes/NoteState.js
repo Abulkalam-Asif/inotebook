@@ -20,11 +20,65 @@ const NoteState = (props) => {
       "tag": "Health",
       "date": "2023-06-03T05:05:51.068Z",
       "__v": 0
+    },
+    {
+      "_id": "647ad261ce66cdc718070219",
+      "user": "64755708f77a52e25b915253",
+      "title": "Eat Fruits",
+      "description": "Eat watermelon and apple.",
+      "tag": "Health",
+      "date": "2023-06-03T05:40:49.605Z",
+      "__v": 0
+    },
+    {
+      "_id": "647ad268ce66cdc71807021b",
+      "user": "64755708f77a52e25b915253",
+      "title": "Eat Fruits",
+      "description": "Eat food.",
+      "tag": "Health",
+      "date": "2023-06-03T05:40:56.734Z",
+      "__v": 0
+    },
+    {
+      "_id": "647ad78f87e5b94f7945034b",
+      "user": "64755708f77a52e25b915253",
+      "title": "Eat Fruits",
+      "description": "Eat food.",
+      "tag": "Health",
+      "date": "2023-06-03T06:02:55.659Z",
+      "__v": 0
+    },
+    {
+      "_id": "647ad79087e5b94f7945034d",
+      "user": "64755708f77a52e25b915253",
+      "title": "Eat Fruits",
+      "description": "Eat food.",
+      "tag": "Health",
+      "date": "2023-06-03T06:02:56.209Z",
+      "__v": 0
+    },
+    {
+      "_id": "647ad79087e5b94f7945034f",
+      "user": "64755708f77a52e25b915253",
+      "title": "Eat Fruits",
+      "description": "Eat food.",
+      "tag": "Health",
+      "date": "2023-06-03T06:02:56.823Z",
+      "__v": 0
+    },
+    {
+      "_id": "647ad79187e5b94f79450351",
+      "user": "64755708f77a52e25b915253",
+      "title": "Eat Fruits",
+      "description": "Eat food.",
+      "tag": "Health",
+      "date": "2023-06-03T06:02:57.435Z",
+      "__v": 0
     }
   ]
   const [notes, setNotes] = useState(notesInitial);
   return (
-    <NoteContext.Provider value={{notes, setNotes}}>
+    <NoteContext.Provider value={{ notes, setNotes }}>
       {props.children}
     </NoteContext.Provider>
   )
