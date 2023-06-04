@@ -8,6 +8,7 @@ import {
   Route
 } from 'react-router-dom';
 import NoteState from './context/notes/NoteState';
+// import Alert from './components/Alert';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <NoteState>
         <Router>
           <Navbar />
+          {/* <Alert message="Deleted Successfully"/> */}
           <div className="container mt-3">
             <Routes>
               <Route exact path="/" element={<Home />} />

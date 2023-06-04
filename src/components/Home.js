@@ -10,7 +10,6 @@ const Home = () => {
           <div className="mb-3">
             <label htmlFor="title" className="form-label">Title</label>
             <input type="text" className="form-control" id="title" aria-describedby="title" />
-            {/* <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div> */}
           </div>
           <div className="mb-3">
             <label htmlFor="description" className="form-label">Description</label>
@@ -19,7 +18,7 @@ const Home = () => {
           <div className="mb-3">
             <label htmlFor="tag" className="form-label">Tag</label>
             <input type="text" className="form-control" id="tag" />
-            <div id="tagText" className="form-text">The default tag is <mark>General</mark>.</div>
+            <div id="tagText" className="form-text">The default tag is <span className="badge text-bg-primary">General</span></div>
           </div>
           <div className="mb-3 form-check">
             <input type="checkbox" className="form-check-input" id="exampleCheck1" />
