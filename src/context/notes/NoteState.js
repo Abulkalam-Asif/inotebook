@@ -44,7 +44,6 @@ const NoteState = (props) => {
 
   // Add a Note
   const addNote = (title, description, tag) => {
-    console.log("Adding a new note in NoteState");
     let note = {
       "_id": new Date().getTime(),
       "user": "64755708f77a52e25b915253",
@@ -54,14 +53,15 @@ const NoteState = (props) => {
       "date": "2023-06-03T06:02:57.435Z",
       "__v": 0
     };
-    setNotes(notesList.concat(note))
+    setNotes(notes.concat(note))
   }
   // Delete a Note
-  const deleteNote = () => {
-
+  const deleteNote = (id) => {
+    const newNotes = notes.filter((note)=> note._id !== id);  
+    setNotes(newNotes);
   }
   // Edit a Note
-  const editNote = () => {
+  const editNote = (id, title, description, tag) => {
 
   }
 

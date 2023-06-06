@@ -37,7 +37,7 @@ const AddNote = () => {
             <input type="text" className="form-control" id="tag" name="tag" onChange={onChange} />
             <div id="tagText" className="form-text">The default tag is <span className="badge text-bg-primary">General</span></div>
           </div>
-          <button type="submit" className="btn btn-primary" onClick={handleClick}>Submit</button>
+          <button type="submit" className="btn btn-primary" onClick={handleClick}>Add Note</button>
         </form>
       </div>
     </>
