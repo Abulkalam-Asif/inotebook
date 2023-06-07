@@ -4,8 +4,7 @@ import NoteContext from '../context/notes/NoteContext';
 const Noteitem = (props) => {
   const context = useContext(NoteContext);
   const { deleteNote } = context;
-
-  const { note } = props;
+  const { note, updateNote } = props;
   return (
     <>
       <div className="col-12 col-md-6 col-lg-4 my-3">
@@ -18,8 +17,8 @@ const Noteitem = (props) => {
             <p className="card-text">{note.description}</p>
           </div>
           <div className="card-footer d-flex justify-content-between">
-            <button className="btn btn-outline-danger border border-danger border-2 py-1 px-2"><i className="fa-regular fa-trash-can fa-lg" onClick={() => { deleteNote(note._id) }}></i></button>
-            <button className="btn btn-outline-success border border-success border-2 py-1 px-2"><i className="fa-regular fa-pen-to-square fa-lg"></i></button>
+            <button className="btn btn-outline-danger border border-danger border-2 py-1 px-2" onClick={() => { deleteNote(note._id) }}><i className="fa-regular fa-trash-can fa-lg"></i></button>
+            <button className="btn btn-outline-success border border-success border-2 py-1 px-2" onClick={() => { updateNote(note) }}><i className="fa-regular fa-pen-to-square fa-lg"></i></button>
           </div>
         </div>
       </div>
