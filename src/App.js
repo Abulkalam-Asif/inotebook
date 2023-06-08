@@ -4,6 +4,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Login from './components/Login';
 import Signup from './components/Signup';
+import UserDetails from './components/UserDetails.js';
 import {
   BrowserRouter as Router,
   Routes,
@@ -28,7 +29,7 @@ function App() {
     <>
       <NoteState>
         <Router>
-          <Navbar />
+          <Navbar showAlert={showAlert} />
           <Alert alert={alert} />
           <div className="container mt-3">
             <Routes>
@@ -36,6 +37,7 @@ function App() {
               <Route exact path="/about" element={<About />} />
               <Route exact path="/login" element={<Login showAlert={showAlert} />} />
               <Route exact path="/signup" element={<Signup showAlert={showAlert} />} />
+              <Route exact path="/userdetails" element={<UserDetails showAlert={showAlert} />} />
             </Routes>
           </div>
         </Router>

@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login = (props) => {
   const emailRef = useRef(null);
@@ -29,16 +29,20 @@ const Login = (props) => {
   return (
     <>
       <h1>Log In</h1>
-      <form className="container mt-4" onSubmit={handleSubmit}>
+      <form className="card rounded-3 mt-4 p-3 p-md-4 shadow-sm" onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="email " className="form-label">Email address</label>
-          <input ref={emailRef} type="email" className="form-control" id="email" name="email" aria-describedby="email" />
+          <input ref={emailRef} type="email" className="form-control" id="email" name="email" aria-describedby="email" required />
         </div>
         <div className="mb-3">
           <label htmlFor="password" className="form-label">Password</label>
-          <input ref={passwordRef} type="password" name="password" className="form-control" id="password" />
+          <input ref={passwordRef} type="password" name="password" className="form-control" id="password" required />
         </div>
         <button type="submit" className="btn btn-primary">Log In</button>
+        <div className="mt-3">
+          <span className="text-success">New to iNotebook?</span>
+          <Link to="/signup" className="btn btn-success ms-3">Sign Up</Link >
+        </div>
       </form>
     </>
   )

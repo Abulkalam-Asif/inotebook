@@ -39,8 +39,8 @@ router.post('/createuser', [
         id: user.id
       }
     };
-    const authToken = jwt.sign(data, JWT_SECRET)
-    res.json({ success: true, message: "Signed up successfully!", authToken });
+    const authtoken = jwt.sign(data, JWT_SECRET)
+    res.json({ success: true, message: "Signed up successfully!", authtoken });
   } catch (error) {
     console.error(error.message)
     res.status(500).json({ success: false, error: "Internal server error occurred" });
@@ -86,7 +86,6 @@ router.post('/getuser', fetchuser, async (req, res) => {
   try {
     const userId = req.user.id;
     const user = await User.findById(userId).select("-password");
-    // res.send(user);
     res.json({ success: true, user });
   } catch (error) {
     console.error(error.message);
