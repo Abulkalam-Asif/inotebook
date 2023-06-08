@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const emailRef = useRef(null);
@@ -27,7 +27,8 @@ const Login = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <h1>Log In</h1>
+      <form className="container mt-4" onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="email " className="form-label">Email address</label>
           <input ref={emailRef} type="email" className="form-control" id="email" name="email" aria-describedby="email" />
