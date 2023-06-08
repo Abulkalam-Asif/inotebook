@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const Login = () => {
+const Login = (props) => {
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
   let navigate = useNavigate();
@@ -20,8 +20,9 @@ const Login = () => {
       // redirect
       localStorage.setItem("token", json.authtoken);
       navigate("/");
+      props.showAlert(json.message, "success");
     } else {
-      alert("Invalid credentials");
+      props.showAlert(json.error, "danger");
     }
   }
 
